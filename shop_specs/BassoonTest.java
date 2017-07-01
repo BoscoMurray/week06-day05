@@ -8,7 +8,7 @@ public class BassoonTest {
 
   @Before
   public void before() {
-    bassoon = new Bassoon("woodwind", "wood", "brown", "contra");
+    bassoon = new Bassoon(5000, 7500, "woodwind", "wood", "brown", "contra");
   }
 
   @Test
@@ -29,6 +29,21 @@ public class BassoonTest {
   @Test
   public void canGetType() {
     assertEquals("contra", bassoon.getType());
+  }
+
+  @Test
+  public void canGetPriceBuy() {
+    assertEquals(5000, bassoon.getPriceBuy(), 0.01);
+  }
+
+  @Test
+  public void canGetPriceSell() {
+    assertEquals(7500, bassoon.getPriceSell(), 0.01);
+  }
+
+  @Test
+  public void canCalculateMarkup() {
+    assertEquals(2500, bassoon.calculateMarkup(), 0.01);
   }
 
 }

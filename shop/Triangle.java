@@ -1,14 +1,18 @@
 package shop;
 import behaviours.*;
 
-public class Triangle extends Instrument implements Playable {
+public class Triangle extends Instrument implements Playable, Sellable {
 
-  public Triangle(String family, String material, String colour) {
-    super(family, material, colour);
+  public Triangle(double price_buy, double price_sell, String family, String material, String colour) {
+    super(price_buy, price_sell, family, material, colour);
   }
 
   public String play() {
     return "Ting!";
+  }
+
+  public double calculateMarkup() {
+    return this.price_sell - this.price_buy;
   }
 
 }

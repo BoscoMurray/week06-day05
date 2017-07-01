@@ -8,7 +8,7 @@ public class GuitarTest {
 
   @Before
   public void before() {
-    guitar = new Guitar("string", "wood", "black", "accoustic", 6);
+    guitar = new Guitar(200, 500, "string", "wood", "black", "accoustic", 6);
   }
 
   @Test
@@ -29,6 +29,21 @@ public class GuitarTest {
   @Test
   public void canGetType() {
     assertEquals("accoustic", guitar.getType());
+  }
+
+  @Test
+  public void canGetPriceBuy() {
+    assertEquals(200, guitar.getPriceBuy(), 0.01);
+  }
+
+  @Test
+  public void canGetPriceSell() {
+    assertEquals(500, guitar.getPriceSell(), 0.01);
+  }
+
+  @Test
+  public void canCalculateMarkup() {
+    assertEquals(300, guitar.calculateMarkup(), 0.01);
   }
 
 }

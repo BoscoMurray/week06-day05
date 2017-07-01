@@ -8,7 +8,7 @@ public class TriangleTest {
 
   @Before
   public void before() {
-    triangle = new Triangle("percussion", "steel", "silver");
+    triangle = new Triangle(10, 25, "percussion", "steel", "silver");
   }
 
   @Test
@@ -24,6 +24,21 @@ public class TriangleTest {
   @Test
   public void canGetColour() {
     assertEquals("silver", triangle.getColour());
+  }
+
+  @Test
+  public void canGetPriceBuy() {
+    assertEquals(10, triangle.getPriceBuy(), 0.01);
+  }
+
+  @Test
+  public void canGetPriceSell() {
+    assertEquals(25, triangle.getPriceSell(), 0.01);
+  }
+
+  @Test
+  public void canCalculateMarkup() {
+    assertEquals(15, triangle.calculateMarkup(), 0.01);
   }
 
 }
