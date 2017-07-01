@@ -16,4 +16,19 @@ public class BassoonTest {
     assertEquals("woodwind", bassoon.getFamily());
   }
 
+  @Test
+  public void canGetMaterial() {
+    assertEquals("wood", bassoon.getMaterial());
+  }
+
+  @Test
+  public void canGetColour() {
+    assertEquals("brown", bassoon.getColour());
+  }
+
+  @Test
+  public void canGetType() {
+    assertEquals("contra", bassoon.getType());
+  }
+
 }
