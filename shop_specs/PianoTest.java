@@ -8,12 +8,12 @@ public class PianoTest {
 
   @Before
   public void before() {
-    piano = new Piano(6000, 10000, "keyboard", "wood", "brown", "upright");
+    piano = new Piano(6000, 10000, InstrumentFamily.KEYBOARD, "wood", "brown", "upright");
   }
 
   @Test
   public void canGetFamily() {
-    assertEquals("keyboard", piano.getFamily());
+    assertEquals(InstrumentFamily.KEYBOARD, piano.getFamily());
   }
 
   @Test

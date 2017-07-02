@@ -3,7 +3,7 @@ import behaviours.*;
 
 public class Triangle extends Instrument implements Playable, Sellable {
 
-  public Triangle(double price_buy, double price_sell, String family, String material, String colour) {
+  public Triangle(double price_buy, double price_sell, InstrumentFamily family, String material, String colour) {
     super(price_buy, price_sell, family, material, colour);
   }
 

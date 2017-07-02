@@ -12,9 +12,9 @@ public class ShopTest {
   @Before
   public void before() {
     shop = new Shop();
-    bassoon = new Bassoon(5000, 7500, "woodwind", "wood", "brown", "contra");
+    bassoon = new Bassoon(5000, 7500, InstrumentFamily.WOODWIND, "wood", "brown", "contra");
     drumsticks = new Drumsticks(7.5, 20, "drumsticks");
-    triangle = new Triangle(10, 25, "percussion", "steel", "silver");
+    triangle = new Triangle(10, 25, InstrumentFamily.PERCUSSION, "steel", "silver");
   }
 
   @Test

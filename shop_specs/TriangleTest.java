@@ -8,12 +8,12 @@ public class TriangleTest {
 
   @Before
   public void before() {
-    triangle = new Triangle(10, 25, "percussion", "steel", "silver");
+    triangle = new Triangle(10, 25, InstrumentFamily.PERCUSSION, "steel", "silver");
   }
 
   @Test
   public void canGetFamily() {
-    assertEquals("percussion", triangle.getFamily());
+    assertEquals(InstrumentFamily.PERCUSSION, triangle.getFamily());
   }
 
   @Test

@@ -8,12 +8,12 @@ public class GuitarTest {
 
   @Before
   public void before() {
-    guitar = new Guitar(200, 500, "string", "wood", "black", "accoustic", 6);
+    guitar = new Guitar(200, 500, InstrumentFamily.STRING, "wood", "black", "accoustic", 6);
   }
 
   @Test
   public void canGetFamily() {
-    assertEquals("string", guitar.getFamily());
+    assertEquals(InstrumentFamily.STRING, guitar.getFamily());
   }
 
   @Test

@@ -3,11 +3,11 @@ package shop;
 public abstract class Instrument {
   double price_buy;
   double price_sell;
-  String family;
+  InstrumentFamily family;
   String material;
   String colour;
 
-  public Instrument(double price_buy, double price_sell, String family, String material, String colour) {
+  public Instrument(double price_buy, double price_sell, InstrumentFamily family, String material, String colour) {
     this.price_buy = price_buy;
     this.price_sell = price_sell;
     this.family = family;
@@ -23,7 +23,7 @@ public abstract class Instrument {
     return this.price_sell;
   }
 
-  public String getFamily() {
+  public InstrumentFamily getFamily() {
     return this.family;
   }
 

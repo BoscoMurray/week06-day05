@@ -4,7 +4,7 @@ import behaviours.*;
 public class Bassoon extends Instrument implements Playable, Sellable {
   String type;
 
-  public Bassoon(double price_buy, double price_sell, String family, String material, String colour, String type) {
+  public Bassoon(double price_buy, double price_sell, InstrumentFamily family, String material, String colour, String type) {
     super(price_buy, price_sell, family, material, colour);
     this.type = type;
   }

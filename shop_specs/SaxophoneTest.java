@@ -8,12 +8,12 @@ public class SaxophoneTest {
 
   @Before
   public void before() {
-    saxophone = new Saxophone(200, 500, "woodwind", "brass", "brass", "alto");
+    saxophone = new Saxophone(200, 500, InstrumentFamily.WOODWIND, "brass", "brass", "alto");
   }
 
   @Test
   public void canGetFamily() {
-    assertEquals("woodwind", saxophone.getFamily());
+    assertEquals(InstrumentFamily.WOODWIND, saxophone.getFamily());
   }
 
   @Test
