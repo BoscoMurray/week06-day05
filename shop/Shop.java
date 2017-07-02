@@ -26,4 +26,14 @@ public class Shop {
     return null;
   }
 
+  public double potentialProfit(){
+    double potentialProfit = 0;
+
+    for(Sellable item : stock){
+      potentialProfit += item.calculateMarkup();
+    }
+
+    return potentialProfit;
+  }
+
 }

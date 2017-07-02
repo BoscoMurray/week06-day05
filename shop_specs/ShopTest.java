@@ -36,4 +36,12 @@ public class ShopTest {
     assertEquals(1, shop.stockCount());
   }
 
+  @Test
+  public void canGetPotentialProfit() {
+    shop.addItem(bassoon);
+    shop.addItem(drumsticks);
+    shop.addItem(triangle);
+    assertEquals(2527.5, shop.potentialProfit(), 0.01);
+  }
+
 }
